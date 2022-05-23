@@ -1,0 +1,17 @@
+body{
+    text-align:center;
+}
+.profileImg{
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+}
+.profileWrapper{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    justify-content: center;
+}
+.profileTxt{
+    margin: 2rem;
+}
