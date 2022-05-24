@@ -1,10 +1,23 @@
 body{
     text-align:center;
+    font-family: "Helvetica Neue",
+        Arial,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        Meiryo,
+        sans-serif;
+    background-color: #21212a;
+    color: #eee;
+}
+a{
+    color: #eee;
+    font-size: 1.3rem;
+    line-height: 2rem;
 }
 .profileImg{
     border-radius: 50%;
-    width: 8rem;
-    height: 8rem;
+    width: 6rem;
+    height: 6rem;
 }
 .profileWrapper{
     display: flex;
@@ -12,6 +25,11 @@ body{
     font-size: 2rem;
     justify-content: center;
 }
-.profileTxt{
+.profileName{
     margin: 2rem;
+}
+.profileTxt{
+    font-style: italic;
+    font-family: serif;
+    font-size: 1rem;
 }
