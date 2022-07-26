@@ -9,6 +9,9 @@ body{
     background-color: #21212a;
     color: #eee;
 }
+h1{
+    margin-bottom: 0.1rem;
+}
 a{
     color: #eee;
     font-size: 1.3rem;
