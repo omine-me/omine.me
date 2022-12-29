@@ -1,38 +1,50 @@
-body{
-    text-align:center;
-    font-family: "Helvetica Neue",
-        Arial,
-        "Hiragino Kaku Gothic ProN",
-        "Hiragino Sans",
-        Meiryo,
-        sans-serif;
-    background-color: #21212a;
-    color: #eee;
+body {
+  text-align: center;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
+  background-color: #21212a;
+  color: #eee;
 }
-h1{
-    margin-bottom: 0.1rem;
+a {
+  color: #eee;
+  font-size: 1.3rem;
+  line-height: 2rem;
 }
-a{
-    color: #eee;
-    font-size: 1.3rem;
-    line-height: 2rem;
+.profileImg {
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
 }
-.profileImg{
-    border-radius: 50%;
-    width: 6rem;
-    height: 6rem;
+.profileWrapper {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  justify-content: center;
 }
-.profileWrapper{
-    display: flex;
-    align-items: center;
-    font-size: 2rem;
-    justify-content: center;
+.profileName {
+  margin-bottom: 0.1rem;
+  margin: 2rem;
+  font-size: 2rem;
 }
-.profileName{
-    margin: 2rem;
+.profileTxt {
+  font-style: italic;
+  font-family: serif;
+  font-size: 1rem;
+  color: grey;
 }
-.profileTxt{
-    font-style: italic;
-    font-family: serif;
-    font-size: 1rem;
+.index {
+  font-size: 1rem;
+}
+.figure {
+  width: 100%;
+}
+.wraper {
+  width: 60%;
+  margin: auto;
+}
+@media screen and (max-width: 580px) {
+  .wraper {
+    width: 100%;
+    margin: auto;
+  }
 }
