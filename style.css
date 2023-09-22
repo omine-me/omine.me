@@ -42,6 +42,7 @@ a {
   justify-content: space-between;
   height: 100%;
   min-height: 15rem;
+  margin: 1rem 0;
 }
 .item_texts{
   width: 70%;
@@ -52,6 +53,7 @@ a {
 }
 .item_award{
   color: orange;
+  margin: 0.3rem auto;
 }
 .figure_wrapper{
   width: 30%;
@@ -70,9 +72,9 @@ a {
 .wraper {
   margin: 0 10%;
 }
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 640px) {
   html{
-    font-size: 20px;
+    font-size: 18px;
   }
   .wraper {
     margin: 0 3%;
