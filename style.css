@@ -73,9 +73,6 @@ a {
   margin: 0 10%;
 }
 @media screen and (max-width: 640px) {
-  html{
-    font-size: 18px;
-  }
   .wraper {
     margin: 0 3%;
   }
