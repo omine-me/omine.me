@@ -4,7 +4,7 @@ body {
     "Hiragino Sans", Meiryo, sans-serif;
   background-color: #21212a;
   color: #eee;
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
 }
 a {
   color: #eee;
@@ -39,7 +39,7 @@ a {
 
 .item_wrapper{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
   min-height: 15rem;
   margin: 1rem 0;
@@ -53,7 +53,9 @@ a {
 }
 .item_award{
   color: orange;
-  margin: 0.3rem auto;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 .figure_wrapper{
   width: 30%;
@@ -72,8 +74,41 @@ a {
 .wraper {
   margin: 0 10%;
 }
+
+h2 {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+h2:before,
+h2:after {
+  border-top: 1px solid;
+  content: "";
+  flex-grow: 1;
+}
+h2:before {
+  margin-right: 1rem
+}
+h2:after {
+  margin-left: 1rem
+}
+
 @media screen and (max-width: 640px) {
   .wraper {
     margin: 0 3%;
+  }
+  .item_wrapper {
+    flex-direction: column-reverse;
+  }
+  .figure_wrapper {
+    height: 10rem;
+    width: 100%;
+  }
+  .item_texts {
+    width: 100%;
+  }
+  .figure{
+    border-radius: 1rem 1rem 0 0;
   }
 }
