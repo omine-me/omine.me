@@ -24,8 +24,16 @@ a {
 }
 .profileName {
   margin-bottom: 0.1rem;
-  margin: 2rem;
+  margin: 1rem 2rem;;
   font-size: 2rem;
+}
+.profileNameJa {
+  margin: 0;
+}
+.profileNameEn {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: normal;
 }
 .profileTxt {
   font-style: italic;
@@ -35,6 +43,20 @@ a {
 }
 .index {
   font-size: 1.3rem;
+}
+
+.appendix_link{
+  display: flex;
+  align-items: center;
+  color: orange;
+  text-decoration: none;
+  border: .13rem solid;
+  border-radius: .5rem;
+  padding: .5rem .8rem;
+}
+.appendix_links{
+  margin: 1rem 0;
+  display: flex;
 }
 
 .item_wrapper{
@@ -70,6 +92,12 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.logo_figure {
+  position: relative;
+  height: 1.8rem;
+  width: 1.8rem;
+  margin-right: .7rem;
 }
 .wraper {
   margin: 0 10%;
