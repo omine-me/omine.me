@@ -11,6 +11,9 @@ a {
   font-size: 1.3rem;
   line-height: 2rem;
 }
+.homeLink {
+  text-decoration-line: none;
+}
 .profileImg {
   border-radius: 50%;
   width: 6rem;
