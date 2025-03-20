@@ -72,6 +72,7 @@ a {
   font-size: 1.3rem;
   line-height: 2rem;
   text-align: left;
+  min-height: 10rem;
 }
 .item_award{
   color: orange;
@@ -134,7 +135,10 @@ h2:after {
     width: 100%;
   }
   .item_texts {
-    width: 100%;
+    width: auto;
+    padding: 1rem;
+    border-radius: 0 0 1rem 1rem;
+    background-color: #444;
   }
   .figure{
     border-radius: 1rem 1rem 0 0;
