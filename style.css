@@ -29,6 +29,9 @@ a {
   margin-bottom: 0.1rem;
   margin: 1rem 2rem;;
   font-size: 2rem;
+  font-weight: bold;
+  unicode-bidi: isolate;
+  display: block;
 }
 .profileNameJa {
   margin: 0;
@@ -104,31 +107,36 @@ a {
   margin-right: .7rem;
 }
 .wraper {
-  margin: 0 10%;
+  margin: 0 10% 5rem;
 }
 
-h2 {
+.subtitle {
   display: flex;
   align-items: center;
   margin-top: 3rem;
 }
 
-h2:before,
-h2:after {
+.subtitle:before,
+.subtitle:after {
   border-top: 1px solid;
   content: "";
   flex-grow: 1;
 }
-h2:before {
+.subtitle:before {
   margin-right: 1rem
 }
-h2:after {
+.subtitle:after {
   margin-left: 1rem
 }
+.brw-support {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
 
 @media screen and (max-width: 640px) {
   .wraper {
-    margin: 0 3%;
+    margin: 0 3% 5rem;
   }
   .item_wrapper {
     flex-direction: column-reverse;
@@ -146,4 +154,14 @@ h2:after {
   .figure{
     border-radius: 1rem 1rem 0 0;
   }
+}
+
+/* font pages */
+.plain_text {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  color: #eee;
+  text-align: left;
+  margin: 1rem 0;
+  overflow-wrap: break-word;
 }
