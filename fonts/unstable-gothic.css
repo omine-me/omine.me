@@ -1,5 +1,5 @@
 @font-face {
 	font-family: 'Unstable-Gothic';
-    src: url(/assets/Unstable-Gothic.woff2);
-	src: url(/assets/Unstable-Gothic.ttf);
+    src: url(/assets/Unstable-Gothic.woff2) format('woff2'),
+		url(/assets/Unstable-Gothic.ttf) format('truetype');
 }
