@@ -165,3 +165,125 @@ a {
   margin: 1rem 0;
   overflow-wrap: break-word;
 }
+
+.font_sample_textarea {
+  width: 100%;
+  height: 10rem;
+  font-size: 35px;
+  font-family: Unstable-Gothic;
+}
+
+.interactive-font-settings {
+  text-align: left;
+}
+
+.dl-btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  background-color: #ff8c00;
+  color: #4d4d4d;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  margin: 0.5rem auto;
+  font-size: 2rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+/* チェックボックス */
+/* チェックボックス全体のコンテナ */
+.custom-input {
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid #ff8c00;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+/* 実際のチェックボックス */
+.custom-input input[type="checkbox"] {
+  display: none;
+}
+
+.custom-input input[type="range"] {
+  -webkit-appearance: none; /* 🚩これ無しだとスタイルがほぼ全く反映されないので注意 */
+  appearance: none;
+  cursor: pointer; /* カーソルを分かりやすく */
+  outline: none; /* スライダーのアウトラインは見た目がキツイので消す */
+  height: 4px; /* バーの高さ */
+  border-radius: 10px;
+  width: 12rem;
+  background: #ff8c00; /* バーの背景色 */
+}
+/* スライダー: WebKit向けのつまみ */
+.custom-input input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /*  🚩デフォルトのつまみのスタイルを解除 */
+  background: #ff8c00;
+  width: 20px; /* 幅 */
+  height: 20px; /* 高さ */
+  border-radius: 50%; /* 円形に */
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15); /* 影 */
+}
+/* スライダー: Moz向けのつまみ */
+.custom-input input[type="range"]::-moz-range-thumb {
+  background: #ff8c00;
+  width: 20px; /* 幅 */
+  height: 20px; /* 高さ */
+  border-radius: 50%; /* 円形に */
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15); /* 影 */
+  border: none; /* デフォルトの線を消す */
+}
+
+/* カスタムチェックボックスの四角 */
+.custom-input .checkmark {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #ff8c00;
+  border-radius: 2px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* チェックマーク */
+.custom-input .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* チェック時のチェックマーク表示 */
+.custom-input input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* チェック時のチェックボックス背景色 */
+.custom-input input:checked ~ .checkmark {
+  background-color: #ff8c00;
+  border-color: #ff8c00;
+}
+
+/* ラベルスタイル */
+.checkbox-label {
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 640px) {
+  /* 箇条書きの入れ子の幅を少なくする */
+  ul, ol {
+    padding-left: 2rem;
+  }
+}
