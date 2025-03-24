@@ -177,6 +177,7 @@ a {
   height: 10rem;
   font-size: 35px;
   font-family: Unstable-Gothic;
+  box-sizing: border-box;
 }
 
 .interactive-font-settings {
