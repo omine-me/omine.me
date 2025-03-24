@@ -178,6 +178,7 @@ a {
   font-size: 35px;
   font-family: Unstable-Gothic;
   box-sizing: border-box;
+  padding: .4rem;
 }
 
 .interactive-font-settings {
