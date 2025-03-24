@@ -184,19 +184,22 @@ a {
 }
 
 .dl-btn {
-  display: block;
-  padding: 0.5rem 1rem;
+  display: inline-block;
+  padding: 1rem 1.2rem;
   background-color: #ff8c00;
   color: #4d4d4d;
   border-radius: 0.5rem;
   text-decoration: none;
-  margin: 0.5rem auto;
+  margin: 1rem auto;
   font-size: 2rem;
   font-weight: bolder;
   cursor: pointer;
   white-space: nowrap;
   overflow: hidden;
   max-width: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* チェックボックス */
