@@ -23,13 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
       if (this.checked) {
         ff = window.getComputedStyle(document.querySelector('.font_sample_textarea')).fontFamily;
         document.body.style.fontFamily = ff;
-        // button要素にも適用
-        button_style = document.createElement("style");
-        button_style.textContent = "button { font-family: " + ff + "; }";
-        document.head.appendChild(button_style);
       } else {
         document.body.style.fontFamily = '';
-        document.head.removeChild(button_style);
       }
     });
   });
