@@ -56,13 +56,15 @@ a {
   align-items: center;
   color: orange;
   text-decoration: none;
-  border: .13rem solid;
+  border: 1px solid;
   border-radius: .5rem;
   padding: .5rem .8rem;
+  margin: 0 .5rem .5rem 0;
 }
 .appendix_links{
-  margin: 1rem 0;
+  margin: .5rem 0 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .item_wrapper{
