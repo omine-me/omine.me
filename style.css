@@ -206,6 +206,15 @@ a {
   transform: translateX(-50%);
 }
 
+.svg-flowchart {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  display: block;
+  height: auto;
+  border: 1px solid #696969;
+}
+
 /* チェックボックス */
 /* チェックボックス全体のコンテナ */
 .custom-input {
