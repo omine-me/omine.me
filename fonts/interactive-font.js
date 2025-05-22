@@ -23,8 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
       if (this.checked) {
         ff = window.getComputedStyle(document.querySelector('.font_sample_textarea')).fontFamily;
         document.body.style.fontFamily = ff;
+        // 太字などになっていると意図しない見た目になるので、全体をnormalにする
+        document.body.classList.add('font-normal');
       } else {
         document.body.style.fontFamily = '';
+        document.body.classList.remove('font-normal');
       }
     });
   });
