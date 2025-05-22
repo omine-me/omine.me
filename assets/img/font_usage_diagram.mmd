@@ -1,0 +1,8 @@
+flowchart LR
+    A[個人（商用利用含む）<br>or<br>非営利団体] ==>B{"クレジット<br>表記する"}
+    B ==>|はい| C(✨無料版✨<br>or<br>寄付版)
+    B ==>|いいえ| D(有料版)
+    E[企業] ===> D
+
+classDef chosenFont fill :#ff8c00, color :#4d4d4d;
+class C,D chosenFont

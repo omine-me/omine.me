@@ -8,8 +8,6 @@ body {
 }
 a {
   color: #eee;
-  font-size: 1.3rem;
-  line-height: 2rem;
 }
 .homeLink {
   text-decoration-line: none;
@@ -47,10 +45,12 @@ a {
   font-size: 1rem;
   color: grey;
 }
-.index {
+.link {
   font-size: 1.3rem;
 }
-
+.social-link {
+  line-height: 2rem;
+}
 .appendix_link{
   display: flex;
   align-items: center;
@@ -157,6 +157,25 @@ a {
     border-radius: 1rem 1rem 0 0;
   }
 }
+.breadcrumb {
+  padding: 0 .5rem;
+  font-size: 1rem;
+  color: darkgrey;
+}
+.breadcrumb ul {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  text-wrap-mode: nowrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.breadcrumb li:not(:last-child)::after {
+  display: inline-block;
+  margin: 0 1rem;
+  content: "›";
+}
 
 /* font pages */
 .plain_text {
@@ -178,7 +197,6 @@ a {
   width: 100%;
   height: 10rem;
   font-size: 35px;
-  font-family: Unstable-Gothic;
   box-sizing: border-box;
   padding: .4rem;
 }

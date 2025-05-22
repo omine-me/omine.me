@@ -3,3 +3,6 @@
     src: url(/assets/fonts/Unstable-Gothic/Unstable-Gothic.woff2) format('woff2'),
 		url(/assets/fonts/Unstable-Gothic/Unstable-Gothic.ttf) format('truetype');
 }
+.font-family-selector {
+	font-family: Unstable-Gothic;
+}

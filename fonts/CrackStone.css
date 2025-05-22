@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'CrackStone';
+    src: url(https://files.omine.me/fonts/CrackStone.woff2) format('woff2'),
+		url(https://files.omine.me/fonts/CrackStone.ttf) format('truetype');
+}
+.font-family-selector {
+	font-family: CrackStone;
+}
