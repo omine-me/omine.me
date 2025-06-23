@@ -134,7 +134,17 @@ a {
   word-break: keep-all;
   overflow-wrap: break-word;
 }
-
+.new::before {  
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 1.3rem;
+  margin-right: .5rem;
+  background-image: url(/assets/img/new.png);
+  background-position: center;
+  background-size: contain;
+  vertical-align: middle;
+}
 
 @media screen and (max-width: 640px) {
   .wraper {
