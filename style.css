@@ -109,7 +109,28 @@ a {
   margin-right: .7rem;
 }
 .wraper {
+  position: relative;
   margin: 0 10% 5rem;
+}
+
+.rss-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  width: 3.25rem;
+  height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+}
+.rss-link img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.rss-link:focus-visible {
+  outline: 2px solid #ffa500;
+  outline-offset: 2px;
 }
 
 .subtitle {

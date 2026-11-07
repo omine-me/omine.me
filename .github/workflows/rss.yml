@@ -1,0 +1,32 @@
+name: Generate RSS
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'rss/entries.json'
+      - 'scripts/generate_rss.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate RSS
+        run: python .github/scripts/generate_rss.py
+
+      - name: Commit RSS
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add feed.xml
+          git diff --cached --quiet || git commit -m "Update RSS feed"
+          git push

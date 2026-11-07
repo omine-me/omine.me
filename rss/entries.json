@@ -1,0 +1,19 @@
+
+{
+  "title": "omine.me",
+  "site_url": "https://omine.me",
+  "description": "大嶺 太聖のウェブサイト",
+  "language": "ja",
+  "entries": [
+    {
+      "title": "アンステイブル・ゴシック - フォント",
+      "url": "/fonts/Unstable-Gothic",
+      "description": "丸みを帯びながらも不安感のある、太めの書体「アンステイブル・ゴシック」。独特の曲線や融解感が特徴で、無料で利用できます。"
+    },
+    {
+      "title": "クラクストン - フォント",
+      "url": "/fonts/CrackStone",
+      "description": "余白を抑えて太く膨張させた、ぎっしり詰まったフォント「クラクストン」。ひびの入った石のようなシルエットが特徴で、無料で利用できます。"
+    }
+  ]
+}
