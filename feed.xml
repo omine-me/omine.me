@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <title>omine.me</title>
+    <link>https://omine.me/</link>
+    <description>大嶺 太聖のウェブサイト</description>
+    <language>ja</language>
+    <lastBuildDate>Sat, 07 Nov 2026 06:42:58 +0000</lastBuildDate>
+    <item>
+      <title>アンステイブル・ゴシック - フォント</title>
+      <link>https://omine.me/fonts/Unstable-Gothic</link>
+      <guid isPermaLink="true">https://omine.me/fonts/Unstable-Gothic</guid>
+      <pubDate>Sat, 07 Nov 2026 15:04:42 +0900</pubDate>
+      <description>丸みを帯びながらも不安感のある、太めの書体「アンステイブル・ゴシック」。独特の曲線や融解感が特徴で、無料で利用できます。</description>
+      <media:thumbnail url="https://omine.me/assets/img/unstable-gothic-thumb.png" />
+    </item>
+    <item>
+      <title>クラクストン - フォント</title>
+      <link>https://omine.me/fonts/CrackStone</link>
+      <guid isPermaLink="true">https://omine.me/fonts/CrackStone</guid>
+      <pubDate>Sat, 07 Nov 2026 15:04:42 +0900</pubDate>
+      <description>余白を抑えて太く膨張させた、ぎっしり詰まったフォント「クラクストン」。ひびの入った石のようなシルエットが特徴で、無料で利用できます。</description>
+      <media:thumbnail url="https://omine.me/assets/img/CrackStone-thumb.png" />
+    </item>
+  </channel>
+</rss>
