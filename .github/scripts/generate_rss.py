@@ -2,6 +2,7 @@
 #!/usr/bin/env python3
 
 import json
+import mimetypes
 import re
 import subprocess
 import sys
@@ -20,6 +21,7 @@ from urllib.parse import urlsplit, unquote
 ROOT = Path(__file__).resolve().parents[2]
 JSON_PATH = ROOT / "rss" / "entries.json"
 FEED_PATH = ROOT / "feed.xml"
+MEDIA_RSS_NS = "http://search.yahoo.com/mrss/"
 
 # ============================================================
 # Validation helpers
@@ -123,6 +125,46 @@ def validate_entry_url(value):
         fail(f"HTML file does not exist: {value}")
 
     return value, file_path
+
+
+def validate_thumbnail_path(value, name):
+    validate_string(value, name)
+
+    parsed = urlsplit(value)
+
+    if (
+        not value.startswith("/")
+        or value.startswith("//")
+        or parsed.scheme
+        or parsed.netloc
+        or parsed.query
+        or parsed.fragment
+    ):
+        fail(f"{name}: must be a root-relative image path")
+
+    decoded = unquote(parsed.path)
+
+    if "\\" in decoded or "\x00" in decoded:
+        fail(f"{name}: invalid image path")
+
+    parts = decoded.lstrip("/").split("/")
+
+    if any(part in ("", ".", "..") for part in parts):
+        fail(f"{name}: invalid image path")
+
+    file_path = (ROOT / decoded.lstrip("/")).resolve()
+
+    if not file_path.is_relative_to(ROOT):
+        fail(f"{name}: points outside the repository")
+
+    if not file_path.is_file():
+        fail(f"{name}: image file does not exist: {value}")
+
+    mime_type, _ = mimetypes.guess_type(file_path.name)
+    if not mime_type or not mime_type.startswith("image/"):
+        fail(f"{name}: must point to an image file: {value}")
+
+    return value
 
 
 # ============================================================
@@ -307,6 +349,11 @@ def load_entries():
             f"{label}.description",
             allow_empty=True,
         )
+        thumbnail_path = entry.get("thumbnail")
+        if thumbnail_path is not None:
+            thumbnail_path = validate_thumbnail_path(
+                thumbnail_path, f"{label}.thumbnail"
+            )
 
         # Preserve the original publication date if already published.
         if absolute_url in existing_dates:
@@ -318,6 +365,7 @@ def load_entries():
             "title": entry_title,
             "url": absolute_url,
             "description": entry_description,
+            "thumbnail": site_url + thumbnail_path if thumbnail_path else None,
             "published": published,
         })
 
@@ -342,6 +390,7 @@ def load_entries():
 
 
 def generate_rss(data):
+    ET.register_namespace("media", MEDIA_RSS_NS)
     rss = ET.Element("rss", version="2.0")
     channel = ET.SubElement(rss, "channel")
 
@@ -370,6 +419,13 @@ def generate_rss(data):
         ET.SubElement(item, "description").text = (
             entry["description"]
         )
+
+        if entry.get("thumbnail"):
+            ET.SubElement(
+                item,
+                f"{{{MEDIA_RSS_NS}}}thumbnail",
+                url=entry["thumbnail"],
+            )
 
     ET.indent(rss, space="  ")
 
