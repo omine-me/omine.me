@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - 'rss/entries.json'
-      - 'scripts/generate_rss.py'
+      - '.github/scripts/generate_rss.py'
   workflow_dispatch:
 
 permissions:

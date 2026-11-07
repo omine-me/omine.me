@@ -85,7 +85,7 @@ def validate_entry_url(value):
     ):
         fail(
             f"Invalid entry URL: {value!r}. "
-            "Use a root-relative path such as /articles/example.html"
+            "Use a root-relative path such as /articles/example or /articles/example.html"
         )
 
     decoded = unquote(parsed.path)
@@ -103,11 +103,24 @@ def validate_entry_url(value):
     if not file_path.is_relative_to(ROOT):
         fail(f"URL points outside the repository: {value}")
 
+    if file_path.suffix.lower() not in (".html", ".htm"):
+        if file_path.suffix:
+            fail(f"URL must point to an HTML file: {value}")
+
+        html_paths = [
+            Path(f"{file_path}.html").resolve(),
+            Path(f"{file_path}.htm").resolve(),
+        ]
+        file_path = next(
+            (path for path in html_paths if path.is_file() and path.is_relative_to(ROOT)),
+            None,
+        )
+
+        if file_path is None:
+            fail(f"HTML file does not exist: {value}")
+
     if not file_path.is_file():
         fail(f"HTML file does not exist: {value}")
-
-    if file_path.suffix.lower() not in (".html", ".htm"):
-        fail(f"URL must point to an HTML file: {value}")
 
     return value, file_path
 
